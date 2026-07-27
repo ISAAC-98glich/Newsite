@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | EcoWonders Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="EcoWonders Logo">
+                <div class="logo-text">
+                    <h2>EcoWonders</h2>
+                    <span>Foundation</span>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="user-info">
+                <span>ISAAC KOFI DZEKPOR</span>
+                <span>BC/ITN/25/090</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Gallery</h1>
+            <p>Moments from the field — our work in action</p>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/tree.jpg" alt="Tree planting">
+                    <div class="gallery-caption">Community Tree Planting</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/solar-com.jpg" alt="Solar installation">
+                    <div class="gallery-caption">Solar Installation</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/zero-waste.jpg" alt="Recycling">
+                    <div class="gallery-caption">Recycling Drive</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/change.jpg" alt="Workshop">
+                    <div class="gallery-caption">Climate Workshop</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mgrov.jpg" alt="Mangrove">
+                    <div class="gallery-caption">Mangrove Restoration</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/clean-water.jpg" alt="Clean water">
+                    <div class="gallery-caption">Clean Water Project</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/teacher.jpg" alt="Community">
+                    <div class="gallery-caption">Community Engagement</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Ama.jpg" alt="Volunteers">
+                    <div class="gallery-caption">Volunteer Day</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>EcoWonders Foundation</h3>
+                <p>Committed to environmental excellence and community empowerment in Ghana.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Takoradi Technical University<br>Ghana</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 EcoWonders Foundation. All Rights Reserved.<br>
+            Designed &amp; Developed by ISAAC KOFI DZEKPOR (BC/ITN/25/090)
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').classList.add('fa-bars');
+                hamburger.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
+</body>
+</html>

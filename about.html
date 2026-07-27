@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | EcoWonders Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="EcoWonders Logo">
+                <div class="logo-text">
+                    <h2>EcoWonders</h2>
+                    <span>Foundation</span>
+                </div>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="user-info">
+                <span>ISAAC KOFI DZEKPOR</span>
+                <span>BC/ITN/25/090</span>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>About Us</h1>
+            <p>Our story, mission, and the people driving change</p>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To protect Ghana’s environment and empower communities through education, renewable energy, reforestation, and sustainable waste management.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>A greener, healthier Ghana where every community thrives in harmony with nature and future generations inherit a sustainable planet.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Our Values</h3>
+                    <p>Integrity, community partnership, innovation, environmental justice, and measurable impact guide everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="story-section">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="story-content">
+                <p>
+                    EcoWonders Foundation was founded in Takoradi, Ghana, by a group of passionate environmentalists and students who saw the urgent need for practical, community-driven solutions to climate change, deforestation, and waste pollution.
+                </p>
+                <p>
+                    What began as small tree-planting drives and school awareness campaigns has grown into a multi-faceted NGO working across the Western Region and beyond. Today we partner with local communities, technical universities, government agencies, and international organizations to deliver lasting change.
+                </p>
+                <p>
+                    We believe that real environmental progress starts at the grassroots — with the people who live closest to the land and the sea. Every project we design is rooted in local knowledge and built for long-term ownership by the communities we serve.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Leadership Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="images/team1.jpg" alt="Founder">
+                    <h3>Isaac Kofi Dzekpor</h3>
+                    <span>Founder & Project Lead</span>
+                </div>
+                <div class="team-card">
+                    <img src="images/team2.jpg" alt="Program Manager">
+                    <h3>Ama Mensah</h3>
+                    <span>Program Manager</span>
+                </div>
+                <div class="team-card">
+                    <img src="images/team3.jpg" alt="Field Coordinator">
+                    <h3>Kwame Ofori</h3>
+                    <span>Field Coordinator</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>EcoWonders Foundation</h3>
+                <p>Committed to environmental excellence and community empowerment in Ghana.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Takoradi Technical University<br>Ghana</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 EcoWonders Foundation. All Rights Reserved.<br>
+            Designed &amp; Developed by ISAAC KOFI DZEKPOR (BC/ITN/25/090)
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').classList.add('fa-bars');
+                hamburger.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | EcoWonders Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="EcoWonders Logo">
+                <div class="logo-text">
+                    <h2>EcoWonders</h2>
+                    <span>Foundation</span>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="user-info">
+                <span>ISAAC KOFI DZEKPOR</span>
+                <span>BC/ITN/25/090</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Our Projects</h1>
+            <p>Impactful initiatives transforming communities across Ghana</p>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <div class="container">
+            <div class="card-grid">
+                <div class="project-card">
+                    <img src="images/tree.jpg" alt="Community Reforestation">
+                    <div class="card-content">
+                        <h3>Community Reforestation</h3>
+                        <p>Planting over 50,000 trees with schools and local communities to restore degraded lands and combat climate change.</p>
+                        <span class="tag">Active</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/solar-com.jpg" alt="Solar for Schools">
+                    <div class="card-content">
+                        <h3>Solar for Schools</h3>
+                        <p>Installing solar systems in rural schools and communities to provide clean, reliable electricity.</p>
+                        <span class="tag">Active</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/zero-waste.jpg" alt="Zero Waste Campaign">
+                    <div class="card-content">
+                        <h3>Zero Waste Campaign</h3>
+                        <p>Establishing recycling hubs and community education programs in Takoradi and Sekondi.</p>
+                        <span class="tag">Active</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/change.jpg" alt="Climate Workshops">
+                    <div class="card-content">
+                        <h3>Climate Education Workshops</h3>
+                        <p>Training over 5,000 youth and teachers on climate action and environmental stewardship.</p>
+                        <span class="tag">Ongoing</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/mgrov.jpg" alt="Mangrove Protection">
+                    <div class="card-content">
+                        <h3>Mangrove Protection</h3>
+                        <p>Restoring and protecting coastal mangrove ecosystems that shield communities from erosion and storms.</p>
+                        <span class="tag">Active</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/clean-water.jpg" alt="Clean Water Initiative">
+                    <div class="card-content">
+                        <h3>Clean Water Initiative</h3>
+                        <p>Improving access to clean water while protecting watersheds and promoting hygiene education.</p>
+                        <span class="tag">Planning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>EcoWonders Foundation</h3>
+                <p>Committed to environmental excellence and community empowerment in Ghana.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Takoradi Technical University<br>Ghana</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 EcoWonders Foundation. All Rights Reserved.<br>
+            Designed &amp; Developed by ISAAC KOFI DZEKPOR (BC/ITN/25/090)
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').classList.add('fa-bars');
+                hamburger.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
+</body>
+</html>

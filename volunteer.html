@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer | EcoWonders Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="EcoWonders Logo">
+                <div class="logo-text">
+                    <h2>EcoWonders</h2>
+                    <span>Foundation</span>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="volunteer.html" class="active">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="user-info">
+                <span>ISAAC KOFI DZEKPOR</span>
+                <span>BC/ITN/25/090</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Become a Volunteer</h1>
+            <p>Join us in protecting the environment and empowering communities</p>
+        </div>
+    </section>
+
+    <section class="volunteer-section">
+        <div class="container">
+            <h2 class="section-title">Why Volunteer With Us?</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Make Real Impact</h3>
+                    <p>Directly contribute to tree planting, clean-ups, education, and renewable energy projects.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Build Skills</h3>
+                    <p>Gain hands-on experience in project management, community engagement, and environmental science.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-globe-africa"></i>
+                    <h3>Join a Movement</h3>
+                    <p>Connect with like-minded people who care about Ghana’s future and the planet.</p>
+                </div>
+            </div>
+
+            <div class="volunteer-form-box">
+                <h2 class="section-title">Register to Volunteer</h2>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" placeholder="Phone Number">
+                        <select required>
+                            <option value="">Select Interest Area</option>
+                            <option>Tree Planting</option>
+                            <option>Education & Workshops</option>
+                            <option>Waste & Recycling</option>
+                            <option>Solar Projects</option>
+                            <option>Any / Flexible</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Tell us a bit about yourself and why you want to volunteer..." rows="5"></textarea>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>EcoWonders Foundation</h3>
+                <p>Committed to environmental excellence and community empowerment in Ghana.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Takoradi Technical University<br>Ghana</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 EcoWonders Foundation. All Rights Reserved.<br>
+            Designed &amp; Developed by ISAAC KOFI DZEKPOR (BC/ITN/25/090)
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').classList.add('fa-bars');
+                hamburger.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
+</body>
+</html>
